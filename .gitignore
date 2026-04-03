@@ -19,3 +19,8 @@ sessions/
 # OS
 .DS_Store
 Thumbs.db
+
+# Dev tooling
+openspec/
+.agent/
+.claude/
