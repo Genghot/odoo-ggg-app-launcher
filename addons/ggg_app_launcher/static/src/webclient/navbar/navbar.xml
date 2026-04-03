@@ -24,7 +24,7 @@
 
         <xpath expr="//nav[hasclass('o_main_navbar')]" position="inside">
             <AppLauncher
-                t-if="state.gggLauncherOpen"
+                t-if="gggState.launcherOpen"
                 onClose.bind="closeGggLauncher"
                 onAppSelect.bind="onNavBarDropdownItemSelection"
             />

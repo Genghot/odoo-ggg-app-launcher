@@ -1,5 +1,6 @@
 /** @odoo-module */
 
+import { useState } from "@odoo/owl";
 import { patch } from "@web/core/utils/patch";
 import { NavBar } from "@web/webclient/navbar/navbar";
 import { AppLauncher } from "@ggg_app_launcher/webclient/app_launcher/app_launcher";
@@ -14,12 +15,12 @@ patch(NavBar, {
 patch(NavBar.prototype, {
     setup() {
         super.setup();
-        this.state.gggLauncherOpen = false;
+        this.gggState = useState({ launcherOpen: false });
     },
     toggleGggLauncher() {
-        this.state.gggLauncherOpen = !this.state.gggLauncherOpen;
+        this.gggState.launcherOpen = !this.gggState.launcherOpen;
     },
     closeGggLauncher() {
-        this.state.gggLauncherOpen = false;
+        this.gggState.launcherOpen = false;
     },
 });
