@@ -21,6 +21,5 @@ sessions/
 Thumbs.db
 
 # Dev tooling
-openspec/
 .agent/
 .claude/
