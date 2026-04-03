@@ -156,3 +156,11 @@ docker compose down -v
 | Jiggle Mode | ![](addons/ggg_app_launcher/static/description/screenshots/jiggle_mode.png) |
 | Favorites | ![](addons/ggg_app_launcher/static/description/screenshots/favorites.png) |
 | Add Favorite | ![](addons/ggg_app_launcher/static/description/screenshots/add_favorite.png) |
+
+---
+
+## Support
+
+If you use this system for your business or find it helpful, please consider supporting its ongoing development!
+
+💖 [Sponsor me on GitHub](https://github.com/sponsors/Genghot)
