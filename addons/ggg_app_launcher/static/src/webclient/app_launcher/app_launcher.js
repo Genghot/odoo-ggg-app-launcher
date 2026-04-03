@@ -496,17 +496,28 @@ export class AppLauncher extends Component {
     }
 
     getAppIconForUrl(url) {
+        // Odoo 17 uses /web#action=ID format
         const allMenus = this.menuService.getAll();
-        let bestMenu = null;
-        let bestLen = 0;
-        for (const menu of allMenus) {
-            const href = `/odoo/${menu.actionPath || (menu.actionID ? "action-" + menu.actionID : null)}`;
-            if (!href || href === "/odoo/null") {
-                continue;
+        // Extract action ID from URL hash (e.g., /web#action=123)
+        let urlActionId = null;
+        const hashIdx = url.indexOf("#");
+        if (hashIdx >= 0) {
+            const hash = url.substring(hashIdx + 1);
+            const params = new URLSearchParams(hash);
+            const actionStr = params.get("action");
+            if (actionStr) {
+                urlActionId = parseInt(actionStr, 10) || actionStr;
             }
-            if (url.startsWith(href) && href.length > bestLen) {
+        }
+        if (!urlActionId) {
+            return null;
+        }
+        // Find menu matching this action
+        let bestMenu = null;
+        for (const menu of allMenus) {
+            if (menu.actionID && menu.actionID == urlActionId) {
                 bestMenu = menu;
-                bestLen = href.length;
+                break;
             }
         }
         if (bestMenu && bestMenu.appID) {

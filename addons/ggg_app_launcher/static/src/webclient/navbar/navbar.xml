@@ -5,8 +5,8 @@
        t-inherit="web.NavBar.AppsMenu"
        t-inherit-mode="extension">
 
-        <!-- Remove mobile branch -->
-        <xpath expr="//t[@t-if='env.isSmall']" position="replace">
+        <!-- Replace the entire Dropdown with our launcher button -->
+        <xpath expr="//Dropdown" position="replace">
             <div class="o_navbar_apps_menu ggg_app_menu">
                 <button class="btn" data-hotkey="h" title="App Launcher"
                         t-on-click="toggleGggLauncher">
@@ -14,9 +14,6 @@
                 </button>
             </div>
         </xpath>
-
-        <!-- Remove desktop branch -->
-        <xpath expr="//t[@t-else='']" position="replace"/>
 
     </t>
 

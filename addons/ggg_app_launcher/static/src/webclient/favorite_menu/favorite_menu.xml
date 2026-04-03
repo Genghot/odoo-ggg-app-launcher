@@ -5,34 +5,32 @@
         <Dropdown position="'bottom-end'"
                   beforeOpen.bind="onBeforeOpen"
                   menuClass="'ggg-favorite-dropdown'">
-            <button class="btn" title="Add to Favorites">
+            <t t-set-slot="toggler">
                 <i class="fa fa-lg fa-star-o" role="img" aria-label="Favorites"/>
-            </button>
-            <t t-set-slot="content">
-                <div class="ggg-favorite-form p-3">
-                    <div class="fw-bold mb-2">Add to Favorites</div>
-                    <div class="mb-2">
-                        <label class="form-label small text-muted mb-1">Name</label>
-                        <input type="text"
-                               class="form-control form-control-sm"
-                               t-att-value="state.name"
-                               t-on-input="onNameInput"
-                               t-on-keydown="onKeydown"
-                               placeholder="Page name"/>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label small text-muted mb-1">URL</label>
-                        <input type="text"
-                               class="form-control form-control-sm text-muted"
-                               t-att-value="state.url"
-                               readonly="true"/>
-                    </div>
-                    <button class="btn btn-primary btn-sm w-100"
-                            t-on-click="onSave">
-                        <i class="fa fa-star me-1"/>Save
-                    </button>
-                </div>
             </t>
+            <div class="ggg-favorite-form p-3">
+                <div class="fw-bold mb-2">Add to Favorites</div>
+                <div class="mb-2">
+                    <label class="form-label small text-muted mb-1">Name</label>
+                    <input type="text"
+                           class="form-control form-control-sm"
+                           t-att-value="state.name"
+                           t-on-input="onNameInput"
+                           t-on-keydown="onKeydown"
+                           placeholder="Page name"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label small text-muted mb-1">URL</label>
+                    <input type="text"
+                           class="form-control form-control-sm text-muted"
+                           t-att-value="state.url"
+                           readonly="true"/>
+                </div>
+                <button class="btn btn-primary btn-sm w-100"
+                        t-on-click="onSave">
+                    <i class="fa fa-star me-1"/>Save
+                </button>
+            </div>
         </Dropdown>
     </t>
 
