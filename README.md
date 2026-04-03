@@ -1,13 +1,13 @@
 # GGG App Launcher
 
+💖 [Sponsor me on GitHub](https://github.com/sponsors/Genghot) — If you use this for your business or find it helpful, please consider supporting its ongoing development!
+
 An iOS/Android-style app launcher for Odoo 19 Community Edition. Replaces the default text dropdown menu with a full-screen icon grid — with swipeable pages, drag-to-reorder, folders, jiggle mode, and favorites.
 
 **Author:** GGG Solutions
 **License:** LGPL-3
 **Depends:** `web`
 **Compatibility:** Odoo 19 Community Edition
-
-💖 [Sponsor me on GitHub](https://github.com/sponsors/Genghot) — If you use this for your business or find it helpful, please consider supporting its ongoing development!
 
 ---
 
