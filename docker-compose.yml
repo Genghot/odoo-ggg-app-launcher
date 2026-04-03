@@ -9,8 +9,6 @@ services:
       - odoo-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
-    environment:
-      - ODOO_ADMIN_PASSWD=${ODOO_ADMIN_PASSWD}
     restart: unless-stopped
 
   db:
