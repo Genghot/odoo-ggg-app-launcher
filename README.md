@@ -21,7 +21,7 @@ Replace the plain text dropdown with a beautiful full-screen overlay showing app
 - Fade/scale animation on open/close
 - Open via navbar button or hotkey `H`
 
-![App Grid](static/description/screenshots/app_grid.png)
+![App Grid](addons/ggg_app_launcher/static/description/screenshots/app_grid.png)
 
 ---
 
@@ -29,7 +29,7 @@ Replace the plain text dropdown with a beautiful full-screen overlay showing app
 
 Unified search bar filters both apps and favorites instantly as you type.
 
-![Search](static/description/screenshots/search.png)
+![Search](addons/ggg_app_launcher/static/description/screenshots/search.png)
 
 ---
 
@@ -42,7 +42,7 @@ Customize your app layout by dragging icons to reorder them. Layout is saved per
 - Per-user layout persisted to server
 - New apps auto-append on install, uninstalled apps auto-cleanup
 
-![Drag Reorder](static/description/screenshots/drag_reorder.png)
+![Drag Reorder](addons/ggg_app_launcher/static/description/screenshots/drag_reorder.png)
 
 ---
 
@@ -56,7 +56,7 @@ Group apps into iOS-style folders by dragging one icon onto another.
 - Drag apps out of folders back to the grid
 - Empty folders auto-delete
 
-![Folders](static/description/screenshots/folders.png)
+![Folders](addons/ggg_app_launcher/static/description/screenshots/folders.png)
 
 ---
 
@@ -69,7 +69,7 @@ Long-press any app icon (or tap "Edit") to enter jiggle mode — icons wobble wi
 - Drag to reorder or create folders
 - Tap "Done" or press Escape to exit
 
-![Jiggle Mode](static/description/screenshots/jiggle_mode.png)
+![Jiggle Mode](addons/ggg_app_launcher/static/description/screenshots/jiggle_mode.png)
 
 ---
 
@@ -85,9 +85,9 @@ Save direct links to any Odoo page for quick access.
 - Inline edit and delete
 - Included in unified search results
 
-![Favorites](static/description/screenshots/favorites.png)
+![Favorites](addons/ggg_app_launcher/static/description/screenshots/favorites.png)
 
-![Add Favorite](static/description/screenshots/add_favorite.png)
+![Add Favorite](addons/ggg_app_launcher/static/description/screenshots/add_favorite.png)
 
 ---
 
@@ -149,10 +149,10 @@ docker compose down -v
 
 | Feature | Screenshot |
 |---------|------------|
-| App Grid | ![](static/description/screenshots/app_grid.png) |
-| Search | ![](static/description/screenshots/search.png) |
-| Drag Reorder | ![](static/description/screenshots/drag_reorder.png) |
-| Folders | ![](static/description/screenshots/folders.png) |
-| Jiggle Mode | ![](static/description/screenshots/jiggle_mode.png) |
-| Favorites | ![](static/description/screenshots/favorites.png) |
-| Add Favorite | ![](static/description/screenshots/add_favorite.png) |
+| App Grid | ![](addons/ggg_app_launcher/static/description/screenshots/app_grid.png) |
+| Search | ![](addons/ggg_app_launcher/static/description/screenshots/search.png) |
+| Drag Reorder | ![](addons/ggg_app_launcher/static/description/screenshots/drag_reorder.png) |
+| Folders | ![](addons/ggg_app_launcher/static/description/screenshots/folders.png) |
+| Jiggle Mode | ![](addons/ggg_app_launcher/static/description/screenshots/jiggle_mode.png) |
+| Favorites | ![](addons/ggg_app_launcher/static/description/screenshots/favorites.png) |
+| Add Favorite | ![](addons/ggg_app_launcher/static/description/screenshots/add_favorite.png) |
