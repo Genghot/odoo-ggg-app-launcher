@@ -1,7 +1,7 @@
 /** @odoo-module */
 
 import { registry } from "@web/core/registry";
-import { user } from "@web/core/user";
+import { session } from "@web/session";
 
 const serviceRegistry = registry.category("services");
 
@@ -100,7 +100,7 @@ export const appLayoutService = {
             if (loaded) {
                 return;
             }
-            const result = await orm.read("res.users", [user.userId], ["ggg_app_layout"]);
+            const result = await orm.read("res.users", [session.uid], ["ggg_app_layout"]);
             const raw = result && result[0] && result[0].ggg_app_layout;
             if (raw) {
                 try {
@@ -319,7 +319,7 @@ export const appLayoutService = {
             }
             const json = JSON.stringify(layout);
             try {
-                await orm.write("res.users", [user.userId], {
+                await orm.write("res.users", [session.uid], {
                     ggg_app_layout: json,
                 });
                 dirty = false;

@@ -1,6 +1,6 @@
 services:
   odoo:
-    image: odoo:19.0
+    image: odoo:18.0
     depends_on:
       - db
     ports:

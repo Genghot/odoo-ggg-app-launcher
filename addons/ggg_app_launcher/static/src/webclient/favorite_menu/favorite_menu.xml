@@ -3,7 +3,6 @@
 
     <t t-name="ggg_app_launcher.FavoriteMenu">
         <Dropdown position="'bottom-end'"
-                  state="dropdown"
                   beforeOpen.bind="onBeforeOpen"
                   menuClass="'ggg-favorite-dropdown'">
             <button class="btn" title="Add to Favorites">

@@ -2,7 +2,6 @@
 
 import { Component, useState } from "@odoo/owl";
 import { Dropdown } from "@web/core/dropdown/dropdown";
-import { useDropdownState } from "@web/core/dropdown/dropdown_hooks";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 
@@ -14,10 +13,10 @@ export class FavoriteMenu extends Component {
     setup() {
         this.orm = useService("orm");
         this.action = useService("action");
-        this.dropdown = useDropdownState();
         this.state = useState({
             name: "",
             url: "",
+            isOpen: false,
         });
     }
 
@@ -56,7 +55,7 @@ export class FavoriteMenu extends Component {
             name,
             url: this.state.url,
         }]);
-        this.dropdown.close();
+        this.state.isOpen = false;
     }
 
     onKeydown(ev) {
