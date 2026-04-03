@@ -24,7 +24,7 @@
         ],
     },
     'images': [
-        'static/description/banner.png',
+        'static/description/screenshots/app_grid.png',
     ],
     'installable': True,
     'application': False,
