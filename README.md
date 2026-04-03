@@ -114,24 +114,34 @@ cd odoo-ggg-app-launcher
 cp .env.example .env
 ```
 
-3. Edit `.env` and set your passwords:
+3. Edit `.env` to configure the database connection:
 
 ```
 POSTGRES_DB=postgres
 POSTGRES_USER=odoo
 POSTGRES_PASSWORD=odoo
-ODOO_ADMIN_PASSWD=your_secure_master_password
 ```
 
-4. Start the services:
+4. Set the Odoo master password in `config/odoo.conf`:
+
+```ini
+[options]
+addons_path = /mnt/extra-addons
+data_dir = /var/lib/odoo
+admin_passwd = your_master_password
+```
+
+> The `admin_passwd` is required to create, duplicate, or delete databases from the web interface. Change it to a secure value in production.
+
+5. Start the services:
 
 ```bash
 docker compose up -d
 ```
 
-5. Open http://localhost:8069 in your browser
+6. Open http://localhost:8069 in your browser
 
-6. Create a new database (or select an existing one), then go to **Settings > Apps > Update Apps List** and install **GGG App Launcher**
+7. Create a new database using the master password you set in `odoo.conf`, then go to **Settings > Apps > Update Apps List** and install **GGG App Launcher**
 
 ### Stopping
 
