@@ -13,6 +13,9 @@ sessions/
 *.swp
 *.swo
 
+# Credentials
+.env
+
 # OS
 .DS_Store
 Thumbs.db

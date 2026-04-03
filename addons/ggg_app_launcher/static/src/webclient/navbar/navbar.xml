@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="ggg_app_launcher.NavBar.AppsMenu"
+       t-inherit="web.NavBar.AppsMenu"
+       t-inherit-mode="extension">
+
+        <!-- Remove mobile branch -->
+        <xpath expr="//t[@t-if='env.isSmall']" position="replace">
+            <div class="o_navbar_apps_menu ggg_app_menu">
+                <button class="btn" data-hotkey="h" title="App Launcher"
+                        t-on-click="toggleGggLauncher">
+                    <i class="oi oi-apps"/>
+                </button>
+            </div>
+        </xpath>
+
+        <!-- Remove desktop branch -->
+        <xpath expr="//t[@t-else='']" position="replace"/>
+
+    </t>
+
+    <!-- Portal the launcher to body so it's outside navbar stacking context -->
+    <t t-name="ggg_app_launcher.NavBar"
+       t-inherit="web.NavBar"
+       t-inherit-mode="extension">
+
+        <xpath expr="//nav[hasclass('o_main_navbar')]" position="inside">
+            <AppLauncher
+                t-if="state.gggLauncherOpen"
+                onClose.bind="closeGggLauncher"
+                onAppSelect.bind="onNavBarDropdownItemSelection"
+            />
+        </xpath>
+
+    </t>
+
+</templates>

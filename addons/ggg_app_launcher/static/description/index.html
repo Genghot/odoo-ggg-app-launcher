@@ -1,44 +1,160 @@
 <section class="oe_container">
     <div class="oe_row oe_spaced">
         <h2 class="oe_slogan">GGG App Launcher</h2>
-        <h3 class="oe_slogan">Quick app launcher for fast navigation between Odoo modules</h3>
+        <h3 class="oe_slogan">An iOS/Android-style app launcher for Odoo 19 Community Edition</h3>
+        <p class="oe_mt32 text-center">
+            Replaces the default text dropdown menu with a full-screen icon grid —
+            with swipeable pages, drag-to-reorder, folders, jiggle mode, and favorites.
+        </p>
     </div>
 </section>
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Key Features</h2>
+        <h2 class="oe_slogan">Full-Screen App Grid</h2>
         <div class="oe_span6">
             <p class="oe_mt32">
-                <b>Quick Launch</b><br/>
-                Instantly access any installed Odoo module from a single launcher interface.
+                Beautiful full-screen overlay showing app icons in a responsive grid layout.
             </p>
+            <ul>
+                <li>Responsive: 3 cols (mobile), 4 cols (tablet), 6 cols (desktop)</li>
+                <li>Swipeable pages with smooth transitions</li>
+                <li>Dot indicators for page navigation</li>
+                <li>Open via navbar button or hotkey <b>H</b></li>
+            </ul>
         </div>
         <div class="oe_span6">
-            <p class="oe_mt32">
-                <b>Fast Navigation</b><br/>
-                Reduce clicks and save time navigating between frequently used apps.
-            </p>
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/app_grid.png" alt="App Grid"/>
+            </div>
         </div>
     </div>
 </section>
 
 <section class="oe_container">
     <div class="oe_row oe_spaced">
-        <h2 class="oe_slogan">Screenshots</h2>
-        <div class="oe_span12">
+        <h2 class="oe_slogan">Search</h2>
+        <div class="oe_span6">
             <div class="oe_demo oe_picture oe_screenshot">
-                <img src="screenshot_01.png" alt="Screenshot"/>
+                <img src="screenshots/search.png" alt="Search"/>
             </div>
+        </div>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Unified search bar filters both <b>apps</b> and <b>favorites</b> instantly as you type.
+            </p>
         </div>
     </div>
 </section>
 
 <section class="oe_container oe_dark">
     <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Drag to Reorder</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Customize your app layout by dragging icons to reorder them.
+            </p>
+            <ul>
+                <li>Drag-and-drop within and across pages</li>
+                <li>Edge scrolling to switch pages while dragging</li>
+                <li>Per-user layout persisted to server</li>
+                <li>New apps auto-append, uninstalled apps auto-cleanup</li>
+            </ul>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/drag_reorder.png" alt="Drag to Reorder"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Folders</h2>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/folders.png" alt="Folders"/>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Group apps into iOS-style folders by dragging one icon onto another.
+            </p>
+            <ul>
+                <li>2x2 mini preview of contained apps</li>
+                <li>Click folder to open popover with full contents</li>
+                <li>Rename folders by clicking the folder name</li>
+                <li>Drag apps out of folders back to the grid</li>
+                <li>Empty folders auto-delete</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Jiggle Mode</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Long-press any app icon or tap <b>Edit</b> to enter jiggle mode —
+                icons wobble with a playful animation, ready to be rearranged.
+            </p>
+            <ul>
+                <li>iOS-style wobble animation</li>
+                <li>Delete badges on folders</li>
+                <li>Drag to reorder or create folders</li>
+                <li>Tap Done or press Escape to exit</li>
+            </ul>
+        </div>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/jiggle_mode.png" alt="Jiggle Mode"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Favorites</h2>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/favorites.png" alt="Favorites"/>
+            </div>
+        </div>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Save direct links to any Odoo page for quick access.
+            </p>
+            <ul>
+                <li>Star button in the navbar to save current page</li>
+                <li>Auto-populates page name from breadcrumb</li>
+                <li>Collapsible favorites section in the launcher</li>
+                <li>App icon resolved automatically from the URL</li>
+                <li>Inline edit and delete</li>
+                <li>Included in unified search results</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Add to Favorites</h2>
+        <div class="oe_span12">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="screenshots/add_favorite.png" alt="Add to Favorites"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
         <h2 class="oe_slogan">Need Help?</h2>
         <div class="oe_span12 text-center">
-            <p>Contact us at <a href="mailto:support@ggg.com">support@ggg.com</a></p>
+            <p>Contact us at <a href="mailto:support@gggsolution.com">support@gggsolution.com</a></p>
         </div>
     </div>
 </section>
