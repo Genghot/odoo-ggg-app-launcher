@@ -7,6 +7,8 @@ An iOS/Android-style app launcher for Odoo 19 Community Edition. Replaces the de
 **Depends:** `web`
 **Compatibility:** Odoo 19 Community Edition
 
+💖 [Sponsor me on GitHub](https://github.com/sponsors/Genghot) — If you use this for your business or find it helpful, please consider supporting its ongoing development!
+
 ---
 
 ## Features
@@ -157,10 +159,3 @@ docker compose down -v
 | Favorites | ![](addons/ggg_app_launcher/static/description/screenshots/favorites.png) |
 | Add Favorite | ![](addons/ggg_app_launcher/static/description/screenshots/add_favorite.png) |
 
----
-
-## Support
-
-If you use this system for your business or find it helpful, please consider supporting its ongoing development!
-
-💖 [Sponsor me on GitHub](https://github.com/sponsors/Genghot)
