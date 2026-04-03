@@ -1002,6 +1002,22 @@ export class AppLauncher extends Component {
         );
     }
 
+    getAppIconSrc(app) {
+        if (!app) {
+            return "";
+        }
+        const data = app.webIconData;
+        if (data) {
+            if (data.startsWith("data:") || data.startsWith("/")) {
+                return data;
+            }
+            // Raw base64 — build data URI
+            const mime = app.webIconDataMimetype || "image/png";
+            return `data:${mime};base64,${data}`;
+        }
+        return "/base/static/description/icon.png";
+    }
+
     getFolderPreviewApps(item) {
         if (!item.resolvedApps) {
             return [];

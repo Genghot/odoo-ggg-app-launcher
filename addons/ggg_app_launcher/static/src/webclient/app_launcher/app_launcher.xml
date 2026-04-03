@@ -65,8 +65,8 @@
                                  class="ggg-favorite-row ggg-favorite-editing">
                                 <t t-set="favApp" t-value="getAppIconForUrl(fav.url)"/>
                                 <div class="ggg-fav-icon">
-                                    <img t-if="favApp and favApp.webIconData"
-                                         t-att-src="favApp.webIconData"
+                                    <img t-if="favApp"
+                                         t-att-src="getAppIconSrc(favApp)"
                                          class="ggg-fav-icon-img" draggable="false"/>
                                     <i t-else="" class="fa fa-star ggg-fav-icon-fallback"/>
                                 </div>
@@ -92,8 +92,8 @@
                                  t-on-click="() => this.onFavoriteClick(fav)">
                                 <t t-set="favApp" t-value="getAppIconForUrl(fav.url)"/>
                                 <div class="ggg-fav-icon">
-                                    <img t-if="favApp and favApp.webIconData"
-                                         t-att-src="favApp.webIconData"
+                                    <img t-if="favApp"
+                                         t-att-src="getAppIconSrc(favApp)"
                                          class="ggg-fav-icon-img" draggable="false"/>
                                     <i t-else="" class="fa fa-star ggg-fav-icon-fallback"/>
                                 </div>
@@ -129,8 +129,8 @@
                                  t-on-click="() => this.onFavoriteClick(fav)">
                                 <t t-set="favApp" t-value="getAppIconForUrl(fav.url)"/>
                                 <div class="ggg-fav-icon">
-                                    <img t-if="favApp and favApp.webIconData"
-                                         t-att-src="favApp.webIconData"
+                                    <img t-if="favApp"
+                                         t-att-src="getAppIconSrc(favApp)"
                                          class="ggg-fav-icon-img" draggable="false"/>
                                     <i t-else="" class="fa fa-star ggg-fav-icon-fallback"/>
                                 </div>
@@ -162,13 +162,7 @@
                                                  }"
                                                  t-on-pointerdown.stop="(ev) => this.onPointerDown(ev, item.appId, 'app', page_index, item_index)">
                                                 <div class="ggg-app-icon">
-                                                    <img t-if="item.app.webIconData"
-                                                         t-att-src="item.app.webIconData"
-                                                         class="ggg-app-img"
-                                                         draggable="false"
-                                                         t-att-alt="item.app.name"/>
-                                                    <img t-else=""
-                                                         src="/base/static/description/icon.png"
+                                                    <img t-att-src="getAppIconSrc(item.app)"
                                                          class="ggg-app-img"
                                                          draggable="false"
                                                          t-att-alt="item.app.name"/>
@@ -195,15 +189,11 @@
                                                     <div class="ggg-folder-preview">
                                                         <t t-foreach="getFolderPreviewApps(item)" t-as="previewApp" t-key="previewApp_index">
                                                             <div class="ggg-folder-preview-slot">
-                                                                <img t-if="previewApp and previewApp.webIconData"
-                                                                     t-att-src="previewApp.webIconData"
+                                                                <img t-if="previewApp"
+                                                                     t-att-src="getAppIconSrc(previewApp)"
                                                                      class="ggg-folder-preview-img"
                                                                      draggable="false"/>
-                                                                <div t-elif="!previewApp" class="ggg-folder-preview-empty"/>
-                                                                <img t-else=""
-                                                                     src="/base/static/description/icon.png"
-                                                                     class="ggg-folder-preview-img"
-                                                                     draggable="false"/>
+                                                                <div t-else="" class="ggg-folder-preview-empty"/>
                                                             </div>
                                                         </t>
                                                     </div>
@@ -268,12 +258,7 @@
                                         ✕
                                     </button>
                                     <div class="ggg-app-icon">
-                                        <img t-if="folderApp.webIconData"
-                                             t-att-src="folderApp.webIconData"
-                                             class="ggg-app-img"
-                                             draggable="false"/>
-                                        <img t-else=""
-                                             src="/base/static/description/icon.png"
+                                        <img t-att-src="getAppIconSrc(folderApp)"
                                              class="ggg-app-img"
                                              draggable="false"/>
                                     </div>
@@ -289,12 +274,7 @@
                      class="ggg-drag-ghost"
                      t-att-style="dragStyle">
                     <div class="ggg-app-icon">
-                        <img t-if="draggedApp.webIconData"
-                             t-att-src="draggedApp.webIconData"
-                             class="ggg-app-img"
-                             draggable="false"/>
-                        <img t-else=""
-                             src="/base/static/description/icon.png"
+                        <img t-att-src="getAppIconSrc(draggedApp)"
                              class="ggg-app-img"
                              draggable="false"/>
                     </div>
